@@ -10,42 +10,53 @@ These instructions will get you a copy of the project up and running on your loc
 
 To make sure this project will work, you'll need to have [Node.js](https://nodejs.org/en/) installed on your machine. This is not a tutorial. It is a quick way of getting started with a project using best practices. If you don't understand how this works, [go back and follow this tutorial](https://prismic.io/docs/technologies/tutorial-gatsby)
 
-As this is a primsic project, the first thing we need to do is create a prismic workspace with some data for us to work with
-
-1. Install Prismic CLI globally on your system (if you don't already have it)
+Install Prismic CLI globally on your system (if you don't already have it) and login
 
 ```
 sudo npm install -g prismic cli
-```
-
-Then log into Prismic on your command line
-
-```
 prismic login
 ```
 
 ### Installing
 
-With that out of the way, we can begin by installing their starter template
+Now we've got the prismic-cli set up, we can run the following command to start installing the theme
 
 ```
-prismic theme https://github.com/prismicio/gatsby-getting-started-tutorial --ignore-conf
+prismic theme --ignore-conf
 ```
 
-You will be prompted to select the url of the theme you want to use --- can I use this as the theme?
+1. You will be prompted to select the url of the theme you want to use
 
-This command will do two things
+  You can choose any prismic theme here but in this case you should use this repo
 
-- It will create a folder on your computer with some default project files - this project makes those files redundant
-- It will create a new prismic project with some dummy data
+  ```
+  https://github.com/danspratling/gatsby-starter-prismic/archive/main.zip
+  ```
 
-Browse the files it installed if you like, but this project is used to quickly create new prismic projects, not learn how to connect things together
+  **Note** You'll need to make sure you point to the zip version of the theme - the main URL won't work
 
-You can safely delete the files this command installed
+2. Next name your repository. Choose whatever you'd like - we'll use `my-awesome-project`
+  
+  This will create your own custom project at `my-awesome-project.prismic.io` with some dummy data already populated
+  
+3. Finally, name the local file. Hit enter if you just want to use the same name as your repository
 
+**Important**: By default, this repo will connect to **my** starter repo. That's great for making sure it doesn't break, but in order for the changes you make to show up you'll need to change `gatsby-config.js` to point at your newly created repo
+
+Change the `gatsby-source-prismic` plugin `repositoryName` to your newly created repo
 ```
-# clone the master branch into your current folder
-git clone https://github.com/danspratling/prismic-starter.git
+{
+  resolve: 'gatsby-source-prismic',
+  options: {
+    repositoryName: 'my-awesome-repo', //change this to your repo name - don't include the prismic.io part of the url
+    linkResolver: () => doc => linkResolver(doc),
+    schemas: {
+      homepage: require('./custom_types/homepage.json'),
+      navigation: require('./custom_types/navigation.json'),
+      page: require('./custom_types/page.json'),
+    }
+  }
+}
 ```
 
 Install the dependencies
@@ -53,6 +64,7 @@ Install the dependencies
 ```
 yarn
 ```
+
 
 #### Development
 
@@ -63,6 +75,11 @@ yarn start
 ```
 
 Then go to [http://localhost:8000](http://localhost:8000)
+
+Now if you go to `my-awesome-repo.prismic.io` and make some changes you should see them reflected in your project (you may need to restart the server)
+
+**Important**: Remember, you'll need to change your `gatsby-config.js` to point at the correct repo!!
+
 
 #### Testing
 
@@ -75,8 +92,9 @@ yarn storybook
 Start cypress to e2e test your site
 
 ```
-yarn cypress
+yarn cy:open
 ```
+
 
 ## Built With
 
@@ -85,12 +103,13 @@ yarn cypress
 - [Storybook](https://storybook.js.org) - A Visual Testing library that's great for documentation
 - [Cypress](https://cypress.io) - An End to End (e2e) testing library that's great for testing for bugs
 
-<!-- ## License
 
-This software is licensed under the Apache 2 license, quoted below.
+### License
 
-Copyright 2020 Prismic (https://prismic.io).
+Copyright 2021 Dan Spratling \([https://danspratling.dev/](https://danspratling.dev/)\)
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. -->
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
