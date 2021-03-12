@@ -10,8 +10,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 To make sure this project will work, you'll need to have [Node.js](https://nodejs.org/en/) installed on your machine. This is not a tutorial. It is a quick way of getting started with a project using best practices. If you don't understand how this works, [go back and follow this tutorial](https://prismic.io/docs/technologies/tutorial-gatsby)
 
-### Installing
-
 As this is a primsic project, the first thing we need to do is create a prismic workspace with some data for us to work with
 
 1. Install Prismic CLI globally on your system (if you don't already have it)
@@ -26,7 +24,9 @@ Then log into Prismic on your command line
 prismic login
 ```
 
-Now you can install their starter template
+### Installing
+
+With that out of the way, we can begin by installing their starter template
 
 ```
 prismic theme https://github.com/prismicio/gatsby-getting-started-tutorial --ignore-conf
