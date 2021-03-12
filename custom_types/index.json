@@ -1,0 +1,5 @@
+[
+  { "id": "navigation", "name": "Navigation", "repeatable": false, "value": "navigation.json" },
+  { "id": "homepage", "name": "Homepage", "repeatable": false, "value": "homepage.json" },
+  { "id": "page", "name": "Page", "repeatable": true, "value": "page.json" }
+]

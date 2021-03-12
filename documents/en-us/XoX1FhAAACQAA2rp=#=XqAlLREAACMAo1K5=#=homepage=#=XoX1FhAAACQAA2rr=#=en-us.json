@@ -1,0 +1,283 @@
+{
+  "prismic_title": [{ "type": "heading1", "content": { "text": "Homepage", "spans": [] } }],
+  "banner_title": [{ "type": "heading2", "content": { "text": "John Doe", "spans": [] } }],
+  "banner_description": [
+    {
+      "type": "paragraph",
+      "content": {
+        "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede asdf.",
+        "spans": []
+      }
+    }
+  ],
+  "banner_link": { "id": "XoX2rhAAACEAA3Jf", "wioUrl": "wio://documents/XoX2rhAAACEAA3Jf" },
+  "banner_link_label": [{ "type": "paragraph", "content": { "text": "Learn More", "spans": [] } }],
+  "banner_background": {
+    "origin": {
+      "id": "XoXxKBAAACIAA1h2",
+      "url": "https://prismic-io.s3.amazonaws.com/getting-started-tutorial/f1a79126-180e-4db2-863d-7d891c81044b_home-banner.jpg",
+      "width": 4896,
+      "height": 3264
+    },
+    "width": 2000,
+    "height": 1333,
+    "url": "https://images.prismic.io/getting-started-tutorial/f1a79126-180e-4db2-863d-7d891c81044b_home-banner.jpg?auto=compress,format&rect=0,0,4896,3263&w=2000&h=1333",
+    "edit": { "background": "#fff", "zoom": 0.4084967320261438, "crop": { "x": 0, "y": 0 } },
+    "credits": null,
+    "alt": null,
+    "provider": "imgix",
+    "thumbnails": {}
+  },
+  "body": [
+    {
+      "key": "text$c926cd9c-2aae-4b1b-825b-9b73deb69211",
+      "value": {
+        "repeat": [{}],
+        "non-repeat": {
+          "columns": "2 Columns",
+          "content": [
+            {
+              "type": "heading2",
+              "content": { "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.", "spans": [] }
+            },
+            {
+              "type": "paragraph",
+              "content": {
+                "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+                "spans": []
+              }
+            },
+            {
+              "type": "paragraph",
+              "content": {
+                "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.",
+                "spans": []
+              }
+            },
+            {
+              "type": "paragraph",
+              "content": {
+                "text": "Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.",
+                "spans": []
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "full_width_image$70591cb9-7927-48c1-9f24-f40e7b5297c5",
+      "value": {
+        "repeat": [{}],
+        "non-repeat": {
+          "full_width_image": {
+            "origin": {
+              "id": "XoXxYhAAACQAA1mB",
+              "url": "https://prismic-io.s3.amazonaws.com/getting-started-tutorial/4346f5ac-c050-4849-9893-5c5faf3eab0a_ski-lift-chairs.jpeg",
+              "width": 3396,
+              "height": 2000
+            },
+            "width": 980,
+            "height": 300,
+            "url": "https://images.prismic.io/getting-started-tutorial/4346f5ac-c050-4849-9893-5c5faf3eab0a_ski-lift-chairs.jpeg?auto=compress,format&rect=0,480,3396,1040&w=980&h=300",
+            "edit": { "background": "#fff", "zoom": 0.28857479387514723, "crop": { "x": 0, "y": -138 } },
+            "credits": null,
+            "alt": "Ski lift chairs",
+            "provider": "imgix",
+            "thumbnails": {}
+          }
+        }
+      }
+    },
+    {
+      "key": "image_highlight$47a84f88-0076-48d6-bc67-a470d32576bc",
+      "value": {
+        "repeat": [{}],
+        "non-repeat": {
+          "featured_image": {
+            "origin": {
+              "id": "XoXxtRAAACIAA1sG",
+              "url": "https://prismic-io.s3.amazonaws.com/getting-started-tutorial/02cebb9b-a918-4dfa-9749-7e4c794ec8ca_mountain-range.jpeg",
+              "width": 3872,
+              "height": 2592
+            },
+            "width": 727,
+            "height": 402,
+            "url": "https://images.prismic.io/getting-started-tutorial/02cebb9b-a918-4dfa-9749-7e4c794ec8ca_mountain-range.jpeg?auto=compress,format&rect=0,224,3872,2141&w=727&h=402",
+            "edit": { "background": "#fff", "zoom": 0.1877582644628099, "crop": { "x": 0, "y": -42 } },
+            "credits": null,
+            "alt": "Mountain range",
+            "provider": "imgix",
+            "thumbnails": {}
+          },
+          "title": [
+            {
+              "type": "heading2",
+              "content": { "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.", "spans": [] }
+            }
+          ],
+          "description": [
+            {
+              "type": "heading3",
+              "content": {
+                "text": "Donec nec justo eget felis facilisis fermentum hendrerit. Phasellu aliquet nibh nec urna.",
+                "spans": []
+              }
+            }
+          ],
+          "link": { "id": "XoX2rhAAACEAA3Jf", "wioUrl": "wio://documents/XoX2rhAAACEAA3Jf" },
+          "link_label": [{ "type": "paragraph", "content": { "text": "LEARN MORE", "spans": [] } }]
+        }
+      }
+    },
+    {
+      "key": "text$13471ac3-0199-4736-9a0d-f43596ace3a8",
+      "value": {
+        "repeat": [{}],
+        "non-repeat": {
+          "columns": "1 Column",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": {
+                "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis.",
+                "spans": []
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "quote$caff1fb5-6af1-4ccf-99de-23aaa042a669",
+      "value": {
+        "repeat": [{}],
+        "non-repeat": {
+          "quote": [{ "type": "paragraph", "content": { "text": "Praesent elementum hendrerit tortor", "spans": [] } }]
+        }
+      }
+    },
+    {
+      "key": "image_gallery$d5a17dda-92d4-4a73-be91-3db6d78556fd",
+      "value": {
+        "repeat": [
+          {
+            "image": {
+              "origin": {
+                "id": "XoXxAxAAACIAA1fI",
+                "url": "https://prismic-io.s3.amazonaws.com/getting-started-tutorial/40b4e428-be5a-45e2-8aa4-0b5068d9ef4a_mountains-and-fjords.jpg",
+                "width": 2784,
+                "height": 1566
+              },
+              "width": 727,
+              "height": 402,
+              "url": "https://images.prismic.io/getting-started-tutorial/40b4e428-be5a-45e2-8aa4-0b5068d9ef4a_mountains-and-fjords.jpg?auto=compress,format&rect=0,11,2784,1539&w=727&h=402",
+              "edit": { "background": "#fff", "zoom": 0.26113505747126436, "crop": { "x": 0, "y": -3 } },
+              "credits": null,
+              "alt": null,
+              "provider": "imgix",
+              "thumbnails": {}
+            },
+            "image_description": [
+              {
+                "type": "paragraph",
+                "content": {
+                  "text": "Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.",
+                  "spans": []
+                }
+              }
+            ],
+            "link": { "id": "XoX2rhAAACEAA3Jf", "wioUrl": "wio://documents/XoX2rhAAACEAA3Jf" },
+            "link_label": [{ "type": "paragraph", "content": { "text": "Learn More", "spans": [] } }]
+          },
+          {
+            "image": {
+              "origin": {
+                "id": "XoXxhhAAACQAA1ot",
+                "url": "https://prismic-io.s3.amazonaws.com/getting-started-tutorial/d757bd98-6965-43af-8238-0b4ed67fa7dd_forrest-aerial-shot.jpeg",
+                "width": 4979,
+                "height": 3319
+              },
+              "width": 727,
+              "height": 402,
+              "url": "https://images.prismic.io/getting-started-tutorial/d757bd98-6965-43af-8238-0b4ed67fa7dd_forrest-aerial-shot.jpeg?auto=compress,format&rect=0,281,4979,2753&w=727&h=402",
+              "edit": { "background": "#fff", "zoom": 0.14601325567383008, "crop": { "x": 0, "y": -41 } },
+              "credits": null,
+              "alt": null,
+              "provider": "imgix",
+              "thumbnails": {}
+            },
+            "image_description": [
+              {
+                "type": "paragraph",
+                "content": {
+                  "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi.",
+                  "spans": []
+                }
+              }
+            ],
+            "link": { "id": "XoX4SBAAACIAA3nJ", "wioUrl": "wio://documents/XoX4SBAAACIAA3nJ" },
+            "link_label": [{ "type": "paragraph", "content": { "text": "More info", "spans": [] } }]
+          }
+        ],
+        "non-repeat": {
+          "gallery_title": [{ "type": "heading2", "content": { "text": "Lorem ipsum dolor sit amet", "spans": [] } }]
+        }
+      }
+    }
+  ],
+  "prismic_title_TYPE": "StructuredText",
+  "prismic_title_POSITION": 0,
+  "banner_title_TYPE": "StructuredText",
+  "banner_title_POSITION": 1,
+  "banner_description_TYPE": "StructuredText",
+  "banner_description_POSITION": 2,
+  "banner_link_TYPE": "Link",
+  "banner_link_POSITION": 3,
+  "banner_link_label_TYPE": "StructuredText",
+  "banner_link_label_POSITION": 4,
+  "banner_background_TYPE": "Image",
+  "banner_background_POSITION": 5,
+  "body_TYPE": "Slices",
+  "body_POSITION": 6,
+  "body.text_TYPE": "Slice",
+  "body.text_POSITION": 7,
+  "body.text.non-repeat.columns_TYPE": "Select",
+  "body.text.non-repeat.columns_POSITION": 8,
+  "body.text.non-repeat.content_TYPE": "StructuredText",
+  "body.text.non-repeat.content_POSITION": 9,
+  "body.quote_TYPE": "Slice",
+  "body.quote_POSITION": 10,
+  "body.quote.non-repeat.quote_TYPE": "StructuredText",
+  "body.quote.non-repeat.quote_POSITION": 11,
+  "body.full_width_image_TYPE": "Slice",
+  "body.full_width_image_POSITION": 12,
+  "body.full_width_image.non-repeat.full_width_image_TYPE": "Image",
+  "body.full_width_image.non-repeat.full_width_image_POSITION": 13,
+  "body.image_gallery_TYPE": "Slice",
+  "body.image_gallery_POSITION": 14,
+  "body.image_gallery.non-repeat.gallery_title_TYPE": "StructuredText",
+  "body.image_gallery.non-repeat.gallery_title_POSITION": 15,
+  "body.image_gallery.repeat.image_TYPE": "Image",
+  "body.image_gallery.repeat.image_POSITION": 16,
+  "body.image_gallery.repeat.image_description_TYPE": "StructuredText",
+  "body.image_gallery.repeat.image_description_POSITION": 17,
+  "body.image_gallery.repeat.link_TYPE": "Link",
+  "body.image_gallery.repeat.link_POSITION": 18,
+  "body.image_gallery.repeat.link_label_TYPE": "StructuredText",
+  "body.image_gallery.repeat.link_label_POSITION": 19,
+  "body.image_highlight_TYPE": "Slice",
+  "body.image_highlight_POSITION": 20,
+  "body.image_highlight.non-repeat.featured_image_TYPE": "Image",
+  "body.image_highlight.non-repeat.featured_image_POSITION": 21,
+  "body.image_highlight.non-repeat.title_TYPE": "StructuredText",
+  "body.image_highlight.non-repeat.title_POSITION": 22,
+  "body.image_highlight.non-repeat.description_TYPE": "StructuredText",
+  "body.image_highlight.non-repeat.description_POSITION": 23,
+  "body.image_highlight.non-repeat.link_TYPE": "Link",
+  "body.image_highlight.non-repeat.link_POSITION": 24,
+  "body.image_highlight.non-repeat.link_label_TYPE": "StructuredText",
+  "body.image_highlight.non-repeat.link_label_POSITION": 25,
+  "slugs_INTERNAL": ["homepage"],
+  "uids_INTERNAL": []
+}

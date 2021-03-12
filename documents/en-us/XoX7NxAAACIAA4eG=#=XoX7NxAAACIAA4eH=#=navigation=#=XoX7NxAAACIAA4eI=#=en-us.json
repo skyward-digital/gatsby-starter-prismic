@@ -1,0 +1,27 @@
+{
+  "top_navigation": [
+    {
+      "link": { "id": "XoX1FhAAACQAA2rp", "wioUrl": "wio://documents/XoX1FhAAACQAA2rp" },
+      "link_label": [{ "type": "paragraph", "content": { "text": "Home", "spans": [] } }]
+    },
+    {
+      "link": { "id": "XoX2rhAAACEAA3Jf", "wioUrl": "wio://documents/XoX2rhAAACEAA3Jf" },
+      "link_label": [{ "type": "paragraph", "content": { "text": "About", "spans": [] } }]
+    },
+    {
+      "link": { "id": "XoX4SBAAACIAA3nJ", "wioUrl": "wio://documents/XoX4SBAAACIAA3nJ" },
+      "link_label": [{ "type": "paragraph", "content": { "text": "More Info", "spans": [] } }]
+    }
+  ],
+  "prismic_title": [{ "type": "heading1", "content": { "text": "Navigation", "spans": [] } }],
+  "prismic_title_TYPE": "StructuredText",
+  "prismic_title_POSITION": 0,
+  "top_navigation_TYPE": "Group",
+  "top_navigation_POSITION": 1,
+  "top_navigation.link_TYPE": "Link",
+  "top_navigation.link_POSITION": 2,
+  "top_navigation.link_label_TYPE": "StructuredText",
+  "top_navigation.link_label_POSITION": 3,
+  "slugs_INTERNAL": ["navigation"],
+  "uids_INTERNAL": []
+}

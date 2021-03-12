@@ -1,0 +1,15 @@
+{
+  "Main": {
+    "prismic_title": { "type": "StructuredText", "config": { "single": "heading1", "label": "Prismic Title" } },
+    "top_navigation": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "link": { "type": "Link", "config": { "select": "document", "label": "link" } },
+          "link_label": { "type": "StructuredText", "config": { "single": "paragraph", "label": "link_label" } }
+        },
+        "label": "top_navigation"
+      }
+    }
+  }
+}
