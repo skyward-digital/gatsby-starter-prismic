@@ -1,3 +1,3 @@
 module.exports = {
-  apiEndpoint: 'https://your-repo-name.prismic.io/api',
+  apiEndpoint: 'https://my-content-pal.prismic.io/api',
 }

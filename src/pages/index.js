@@ -1,28 +1,35 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout/Layout'
-import SEO from '../components/SEO'
-import Hero from '../components/Hero/Hero'
-import SliceZone from '../components/SliceZone/SliceZone'
+import { Layout } from '../components/Layout/Layout'
+import { Hero } from '../components/Hero/Hero'
+import { SliceZone } from '../components/SliceZone/SliceZone'
 
 const Homepage = ({ data }) => {
   if (!data) return null
-  const document = data.allPrismicHomepage.edges[0].node.data
+  const { data: document, lang, url } = data.allPrismicHomepage.edges[0].node
+  const prismicLayout = data.prismicLayout
 
-  const bannerContent = {
-    title: document.banner_title,
-    description: document.banner_description,
-    link: document.banner_link,
-    linkLabel: document.banner_link_label,
-    background: document.banner_background,
+  const seo = {
+    meta_title: document.meta_title || prismicLayout.data.meta_title,
+    meta_description: document.meta_description || prismicLayout.data.meta_description,
+    meta_image: document.meta_image?.url || prismicLayout.data.meta_image?.url,
+    url: url,
+    article: false,
+    lang: lang,
   }
 
-  const prismicNavigation = data.prismicNavigation
+  const hero = {
+    title: document.hero_title,
+    description: document.hero_description,
+    link: document.hero_link,
+    linkLabel: document.hero_link_label,
+  }
+
+  // console.log(prismicLayout)
 
   return (
-    <Layout isHomepage navigation={prismicNavigation}>
-      <SEO title='Home' />
-      <Hero bannerContent={bannerContent} />
+    <Layout data={prismicLayout.data} seo={seo}>
+      <Hero {...hero} />
       <SliceZone sliceZone={document.body} />
     </Layout>
   )
@@ -33,100 +40,259 @@ export const query = graphql`
     allPrismicHomepage {
       edges {
         node {
+          url
+          lang
           data {
-            banner_title {
+            meta_title
+            meta_description
+            meta_image {
+              url
+            }
+            hero_title {
               raw
             }
-            banner_description {
+            hero_description {
               raw
             }
-            banner_link {
+            hero_link {
               url
               type
               uid
+              link_type
             }
-            banner_link_label {
+            hero_link_label {
               raw
             }
-            banner_background {
-              url
-              thumbnails
-              alt
-            }
             body {
-              ... on PrismicHomepageBodyText {
+              ... on PrismicHomepageBodyCustomerLogos {
                 slice_type
-                primary {
-                  columns
-                  content {
-                    raw
-                  }
-                }
-              }
-              ... on PrismicHomepageBodyQuote {
-                slice_type
-                primary {
-                  quote {
-                    raw
-                  }
-                }
-              }
-              ... on PrismicHomepageBodyFullWidthImage {
-                slice_type
-                primary {
-                  full_width_image {
-                    url
-                    thumbnails
-                  }
-                }
-              }
-              ... on PrismicHomepageBodyImageGallery {
-                slice_type
-                primary {
-                  gallery_title {
-                    raw
-                  }
-                }
                 items {
-                  image {
-                    url
-                    thumbnails
+                  logo {
                     alt
-                  }
-                  image_description {
-                    raw
-                  }
-                  link {
                     url
-                    type
-                    uid
-                  }
-                  link_label {
-                    raw
                   }
                 }
               }
-              ... on PrismicHomepageBodyImageHighlight {
+              ... on PrismicHomepageBodyFeatureGrid {
+                id
                 slice_type
                 primary {
-                  featured_image {
-                    url
-                    thumbnails
-                    alt
-                  }
                   title {
                     raw
                   }
                   description {
                     raw
                   }
-                  link {
+                }
+                items {
+                  description {
+                    raw
+                  }
+                  title {
+                    raw
+                  }
+                  icon {
+                    url
+                    alt
+                  }
+                }
+              }
+              ... on PrismicHomepageBodyCallToActionCentered {
+                id
+                slice_type
+                primary {
+                  title {
+                    raw
+                  }
+                  paragraph {
+                    raw
+                  }
+                  button_link {
                     url
                     type
                     uid
+                    link_type
                   }
-                  link_label {
+                  button_label {
                     raw
+                  }
+                }
+              }
+              ... on PrismicHomepageBodyCallToActionSplit {
+                id
+                slice_type
+                primary {
+                  title {
+                    raw
+                  }
+                  paragraph {
+                    raw
+                  }
+                  button_link {
+                    url
+                    type
+                    uid
+                    link_type
+                  }
+                  button_label {
+                    raw
+                  }
+                  image {
+                    url
+                    thumbnails
+                    alt
+                  }
+                }
+              }
+              ... on PrismicHomepageBodyFeaturedBlogList {
+                id
+                slice_type
+                primary {
+                  description {
+                    raw
+                  }
+                  title {
+                    raw
+                  }
+                }
+                items {
+                  blog_post {
+                    uid
+                    document {
+                      ... on PrismicBlogPost {
+                        url
+                        data {
+                          meta_title
+                          meta_description
+                          meta_image {
+                            url
+                          }
+                          title {
+                            raw
+                          }
+                          description {
+                            raw
+                          }
+                          publish_date
+                          featured_image {
+                            url
+                            alt
+                            dimensions {
+                              width
+                              height
+                            }
+                          }
+                          blog_category {
+                            uid
+                            document {
+                              ... on PrismicBlogCategory {
+                                id
+                                data {
+                                  display_name {
+                                    raw
+                                  }
+                                }
+                              }
+                            }
+                          }
+                          author {
+                            document {
+                              ... on PrismicAuthor {
+                                data {
+                                  avatar {
+                                    url
+                                    alt
+                                  }
+                                  name {
+                                    raw
+                                    text
+                                  }
+                                  bio {
+                                    raw
+                                  }
+                                  company {
+                                    raw
+                                  }
+                                  job_title {
+                                    raw
+                                  }
+                                }
+                              }
+                            }
+                          }
+                          body {
+                            ... on PrismicBlogPostBodyText {
+                              slice_type
+                              primary {
+                                content {
+                                  raw
+                                  text
+                                }
+                              }
+                            }
+                            ... on PrismicBlogPostBodyQuote {
+                              slice_type
+                              primary {
+                                quote {
+                                  raw
+                                }
+                              }
+                            }
+                            ... on PrismicBlogPostBodyFullWidthImage {
+                              slice_type
+                              primary {
+                                full_width_image {
+                                  url
+                                  thumbnails
+                                }
+                              }
+                            }
+                            ... on PrismicBlogPostBodyNewsletter {
+                              slice_type
+                              primary {
+                                submit_label {
+                                  raw
+                                }
+                                paragraph {
+                                  raw
+                                }
+                                title {
+                                  raw
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              ... on PrismicHomepageBodyTestimonial {
+                id
+                slice_type
+                primary {
+                  testimonial {
+                    document {
+                      ... on PrismicTestimonial {
+                        id
+                        data {
+                          quote {
+                            raw
+                          }
+                          author {
+                            raw
+                          }
+                          position {
+                            raw
+                          }
+                          avatar {
+                            url
+                            alt
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -135,8 +301,12 @@ export const query = graphql`
         }
       }
     }
-    prismicNavigation {
-      ...HeaderQuery
+    prismicLayout {
+      data {
+        ...SeoFragment
+        ...HeaderFragment
+        ...FooterFragment
+      }
     }
   }
 `

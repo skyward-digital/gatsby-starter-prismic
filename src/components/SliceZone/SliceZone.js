@@ -1,17 +1,21 @@
 import React from 'react'
-import FullWidthImage from '../_slices/FullWidthImage/FullWidthImage'
-import ImageGallery from '../_slices/ImageGallery/ImageGallery'
-import ImageHighlight from '../_slices/ImageHighlight/ImageHighlight'
-import Quote from '../_slices/Quote/Quote'
-import Text from '../_slices/Text/Text'
+import { CTASplitWithScreenshot } from '../_slices/CTASplitWithScreenshot/CTASplitWithScreenshot'
+import { CTASimpleCentered } from '../_slices/CTASimpleCentered/CTASimpleCentered'
+import { CustomerLogos } from '../_slices/CustomerLogos/CustomerLogos'
+import { Features } from '../_slices/Features/Features'
+import { FeaturedBlogList } from '../_slices/FeaturedBlogList/FeaturedBlogList'
+import { Testimonial } from '../_slices/Testimonial/Testimonial'
+import { NewsletterForm } from '../_article/_slices/Newsletter/Newsletter'
 
-const SliceZone = ({ sliceZone }) => {
+export const SliceZone = ({ sliceZone }) => {
   const sliceComponents = {
-    full_width_image: FullWidthImage,
-    image_gallery: ImageGallery,
-    image_highlight: ImageHighlight,
-    quote: Quote,
-    text: Text,
+    customer_logos: CustomerLogos,
+    feature_grid: Features,
+    call_to_action_split: CTASplitWithScreenshot,
+    call_to_action_centered: CTASimpleCentered,
+    testimonial: Testimonial,
+    newsletter: NewsletterForm,
+    featured_blog_list: FeaturedBlogList,
   }
 
   const sliceZoneContent = sliceZone.map((slice, index) => {
@@ -23,7 +27,5 @@ const SliceZone = ({ sliceZone }) => {
     return null
   })
 
-  return <main className='container'>{sliceZoneContent}</main>
+  return <div>{sliceZoneContent}</div>
 }
-
-export default SliceZone

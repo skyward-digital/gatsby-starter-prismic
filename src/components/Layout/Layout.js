@@ -1,16 +1,32 @@
 import React from 'react'
-import Header from '../Header/Header'
-import Footer from '../Footer/Footer'
-import '../../styles/reset.css'
-import '../../styles/common.css'
-import '../../styles/style.css'
+import { App } from '../App'
+import { SEO } from '../SEO'
+import { Header } from '../Header/Header'
+import { Footer } from '../Footer/Footer'
 
-const Layout = ({ isHomepage, children, navigation }) => (
-  <>
-    <Header isHomepage={isHomepage} navigation={navigation} />
-    {children}
-    <Footer />
-  </>
-)
+export const Layout = ({ seo, data, children, ...rest }) => {
+  const header = {
+    logo: data.header_logo,
+    navigation: data.header_body,
+  }
 
-export default Layout
+  const footer = {
+    logo: data.footer_logo,
+    linkGroups: data.footer_body,
+    socials: [
+      { type: 'twitter', ...data.twitter },
+      { type: 'linkedin', ...data.linkedin },
+      { type: 'instagram', ...data.instagram },
+      { type: 'github', ...data.github },
+    ],
+  }
+
+  return (
+    <App {...rest}>
+      <SEO {...seo} />
+      <Header {...header} />
+      <main>{children}</main>
+      <Footer {...footer} />
+    </App>
+  )
+}

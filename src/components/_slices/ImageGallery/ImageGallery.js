@@ -1,8 +1,8 @@
 import React from 'react'
 import { RichText } from 'prismic-reactjs'
-import ImageGalleryItem from './ImageGalleryItem'
+import { ImageGalleryItem } from './ImageGalleryItem'
 
-const ImageGallery = ({ primary: { gallery_title }, items }) => {
+export const ImageGallery = ({ primary: { gallery_title }, items }) => {
   return (
     <section className='image-gallery content-section'>
       <RichText render={gallery_title.raw} />
@@ -14,5 +14,3 @@ const ImageGallery = ({ primary: { gallery_title }, items }) => {
     </section>
   )
 }
-
-export default ImageGallery

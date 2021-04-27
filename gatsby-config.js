@@ -9,15 +9,22 @@ module.exports = {
     {
       resolve: 'gatsby-source-prismic',
       options: {
-        repositoryName: 'danspratling-starter',
+        repositoryName: 'my-content-pal',
         linkResolver: () => doc => linkResolver(doc),
         schemas: {
+          author: require('./custom_types/author.json'),
+          blog_category: require('./custom_types/blog_category.json'),
+          blog_list: require('./custom_types/blog_list.json'),
+          blog_post: require('./custom_types/blog_post.json'),
+          contact: require('./custom_types/contact.json'),
           homepage: require('./custom_types/homepage.json'),
-          navigation: require('./custom_types/navigation.json'),
+          layout: require('./custom_types/layout.json'),
           page: require('./custom_types/page.json'),
+          testimonial: require('./custom_types/testimonial.json'),
         },
       },
     },
+    'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
@@ -37,7 +44,15 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: [`Lato\:400,400,700,700i,900`, `Amiri\:400,400,700,700i`],
+        fonts: [`Inter\:400,400,700,700i,900`],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/,
+        },
       },
     },
   ],

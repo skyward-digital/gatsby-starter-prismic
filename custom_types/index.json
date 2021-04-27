@@ -1,5 +1,11 @@
 [
-  { "id": "navigation", "name": "Navigation", "repeatable": false, "value": "navigation.json" },
+  { "id": "author", "name": "Author", "repeatable": true, "value": "author.json" },
+  { "id": "blog_category", "name": "Blog Category", "repeatable": true, "value": "blog_category.json" },
+  { "id": "blog_list", "name": "Blog List", "repeatable": false, "value": "blog_list.json" },
+  { "id": "blog_post", "name": "Blog Post", "repeatable": true, "value": "blog_post.json" },
+  { "id": "contact", "name": "Contact", "repeatable": false, "value": "contact.json" },
   { "id": "homepage", "name": "Homepage", "repeatable": false, "value": "homepage.json" },
-  { "id": "page", "name": "Page", "repeatable": true, "value": "page.json" }
+  { "id": "layout", "name": "Layout", "repeatable": false, "value": "layout.json" },
+  { "id": "page", "name": "Page", "repeatable": true, "value": "page.json" },
+  { "id": "testimonial", "name": "Testimonial", "repeatable": true, "value": "testimonial.json" }
 ]

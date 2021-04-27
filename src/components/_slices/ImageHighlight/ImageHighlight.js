@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { RichText } from 'prismic-reactjs'
 
-const ImageHighlight = ({ primary: { title, description, link, link_label, featured_image } }) => (
+export const ImageHighlight = ({ primary: { title, description, link, link_label, featured_image } }) => (
   <section className='highlight content-section'>
     <div className='highlight-left'>
       <RichText render={title.raw} />
@@ -18,5 +18,3 @@ const ImageHighlight = ({ primary: { title, description, link, link_label, featu
     </div>
   </section>
 )
-
-export default ImageHighlight

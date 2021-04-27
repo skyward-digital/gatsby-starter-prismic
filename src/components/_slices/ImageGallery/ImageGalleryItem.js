@@ -2,7 +2,7 @@ import React from 'react'
 import { RichText } from 'prismic-reactjs'
 import { Link } from 'gatsby'
 
-const ImageGalleryItem = ({ image, image_description, link, link_label }) => {
+export const ImageGalleryItem = ({ image, image_description, link, link_label }) => {
   return (
     <div className='gallery-item'>
       <img src={image.url} alt={image.alt} />
@@ -15,5 +15,3 @@ const ImageGalleryItem = ({ image, image_description, link, link_label }) => {
     </div>
   )
 }
-
-export default ImageGalleryItem
