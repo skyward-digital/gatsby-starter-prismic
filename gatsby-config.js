@@ -9,7 +9,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-prismic',
       options: {
-        repositoryName: 'my-content-pal',
+        repositoryName: 'marketing-starter',
         linkResolver: () => doc => linkResolver(doc),
         schemas: {
           author: require('./custom_types/author.json'),
