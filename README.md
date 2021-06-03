@@ -27,23 +27,24 @@ prismic theme --ignore-conf
 
 1. You will be prompted to select the url of the theme you want to use
 
-  You can choose any prismic theme here but in this case you should use this repo
+You can choose any prismic theme here but in this case you should use this repo
 
-  ```
-  https://github.com/danspratling/gatsby-starter-prismic/archive/main.zip
-  ```
+```
+https://github.com/danspratling/gatsby-starter-prismic/archive/main.zip
+```
 
-  **Note** You'll need to make sure you point to the zip version of the theme - the main URL won't work
+**Note** You'll need to make sure you point to the zip version of the theme - the main URL won't work
 
 2. Next name your repository. Choose whatever you'd like - we'll use `my-awesome-project`
-  
-  This will create your own custom project at `my-awesome-project.prismic.io` with some dummy data already populated
-  
+
+This will create your own custom project at `my-awesome-project.prismic.io` with some dummy data already populated
+
 3. Finally, name the local file. Hit enter if you just want to use the same name as your repository
 
 **Important**: By default, this repo will connect to **my** starter repo. That's great for making sure it doesn't break, but in order for the changes you make to show up you'll need to change `gatsby-config.js` to point at your newly created repo
 
 Change the `gatsby-source-prismic` plugin `repositoryName` to your newly created repo
+
 ```
 {
   resolve: 'gatsby-source-prismic',
@@ -65,7 +66,6 @@ Install the dependencies
 yarn
 ```
 
-
 #### Development
 
 Start the development server
@@ -80,6 +80,17 @@ Now if you go to `my-awesome-repo.prismic.io` and make some changes you should s
 
 **Important**: Remember, you'll need to change your `gatsby-config.js` to point at the correct repo!!
 
+##### How to add a new Page Template to Prismic and Gatsby
+
+1. Create the Custom Type in Prismic
+1. Create a new file in `/content_types` and add the JSON from Prismic (copy and paste from the JSON editor).
+1. `require()` the new file in `gastby-config.js` in `gatsby-source-prismic` so that Gatsby is aware this new data exists
+1. Add the `doc.type` to the link resolver (`utlis/linkResolver.js`) so that internal links work correctly
+1. Add a new method to `gatsby-node.js` so that the page template can be built
+1. Start the dev server and go to `localhost:8000/__graphql` and fetch the new data
+1. Create a new page template (repeatable) in `/templates` or a new page (single) in `/pages` and update the GraphQL to fetch the data from prismic
+
+_Note_: If you update the Prismic Custom Type later to add/delete page sections, you will need to update the respective file in `content_types` again so that they match, or Gatsby will be unaware of this change.
 
 #### Testing
 
@@ -95,14 +106,12 @@ Start cypress to e2e test your site
 yarn cy:open
 ```
 
-
 ## Built With
 
 - [Gatsby](https://www.gatsbyjs.org/) - A Static Site Generator (SSG) used for creating fast websites with React
 - [Prismic](https://prismic.io/) - An API-based Content Management System (CMS)
 - [Storybook](https://storybook.js.org) - A Visual Testing library that's great for documentation
 - [Cypress](https://cypress.io) - An End to End (e2e) testing library that's great for testing for bugs
-
 
 ### License
 
