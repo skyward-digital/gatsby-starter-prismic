@@ -19,10 +19,19 @@ export const SliceZone = ({ sliceZone }) => {
   }
 
   const sliceZoneContent = sliceZone.map((slice, index) => {
+    let nextSliceOverflow;
+
+    if (slice.slice_type === "call_to_action_split") {
+      counter++; 
+
+      sliceZone[index + 1]?.slice_type === "call_to_action_split"
+      ?  nextSliceOverflow = true :  nextSliceOverflow = false
+    }
+
     const SliceComponent = sliceComponents[slice.slice_type]
     if (SliceComponent) {
       //Slices contain a static section (primary), and a repeating group (items) if available
-      return <SliceComponent key={`slice-${index}`} {...slice} />
+      return <SliceComponent key={`slice-${index}`} {...slice} reversed={counter % 2} overflow={nextSliceOverflow} />
     }
     return null
   })

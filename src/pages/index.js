@@ -25,8 +25,6 @@ const Homepage = ({ data }) => {
     linkLabel: document.hero_link_label,
   }
 
-  // console.log(prismicLayout)
-
   return (
     <Layout data={prismicLayout.data} seo={seo}>
       <Hero {...hero} />

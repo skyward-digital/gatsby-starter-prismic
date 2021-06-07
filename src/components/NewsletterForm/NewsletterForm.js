@@ -23,7 +23,6 @@ export const NewsletterForm = ({ buttonLabel, isPrimary }) => {
 
   const onSubmit = async data => {
     // await asyncSubmitEmailToServer(data)
-    console.log(data)
     setHasSubmitted(true)
   }
 

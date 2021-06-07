@@ -18,6 +18,7 @@ export const Layout = ({ seo, data, children, ...rest }) => {
       { type: 'linkedin', ...data.linkedin },
       { type: 'instagram', ...data.instagram },
       { type: 'github', ...data.github },
+      { type: 'facebook', ...data.facebook },
     ],
   }
 
