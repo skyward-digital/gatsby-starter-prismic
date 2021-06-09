@@ -32,8 +32,6 @@ const Contact = ({ data }) => {
     email: document.email,
   }
 
-  // console.log(prismicLayout)
-
   return (
     <Layout data={prismicLayout.data} seo={seo}>
       <Hero {...hero} />

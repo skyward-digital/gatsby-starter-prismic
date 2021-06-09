@@ -3,7 +3,6 @@ import { RichText } from 'prismic-reactjs'
 import { PhoneIcon, MailIcon } from '@heroicons/react/solid'
 
 export const ContactForm = ({ title, description, address, telephone, email }) => {
-  console.log(telephone)
   return (
     <div className='relative bg-theme'>
       <div className='relative max-w-7xl mx-auto lg:grid lg:grid-cols-5'>
