@@ -11,9 +11,6 @@ yarn-error.log*
 # Dependency directories
 node_modules/
 
-# npm files (yarn should be used for deploys)
-.package-lock.json
-
 # eslint files
 .eslintcache
 .eslintrc.js

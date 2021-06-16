@@ -1,0 +1,203 @@
+{
+  "uid": "about",
+  "body": [
+    {
+      "key": "full_width_image$c2bff84e-cdfd-4ca2-98db-ba458a881eec",
+      "value": {
+        "repeat": [{}],
+        "non-repeat": {
+          "full_width_image": {
+            "origin": {
+              "id": "XoXxYhAAACQAA1mB",
+              "url": "https://prismic-io.s3.amazonaws.com/getting-started-tutorial/4346f5ac-c050-4849-9893-5c5faf3eab0a_ski-lift-chairs.jpeg",
+              "width": 3396,
+              "height": 2000
+            },
+            "width": 980,
+            "height": 300,
+            "url": "https://images.prismic.io/getting-started-tutorial/4346f5ac-c050-4849-9893-5c5faf3eab0a_ski-lift-chairs.jpeg?auto=compress,format&rect=0,482,3396,1040&w=980&h=300",
+            "edit": { "background": "#fff", "zoom": 0.28857479387514723, "crop": { "x": 0, "y": -139 } },
+            "credits": null,
+            "alt": "Ski lift chairs",
+            "provider": "imgix",
+            "thumbnails": {}
+          }
+        }
+      }
+    },
+    {
+      "key": "text$c881875f-2f9c-4c24-873a-c06c61157234",
+      "value": {
+        "repeat": [{}],
+        "non-repeat": {
+          "columns": "2 Columns",
+          "content": [
+            { "type": "heading1", "content": { "text": "About Us", "spans": [] } },
+            {
+              "type": "paragraph",
+              "content": {
+                "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
+                "spans": []
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "text$3d125c1f-6609-4bac-bd38-6c4354fe352e",
+      "value": {
+        "repeat": [{}],
+        "non-repeat": {
+          "columns": "1 Column",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": {
+                "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Ut scelerisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique. Nunc iaculis mi in ante. Vivamus imperdiet nibh feugiat est. Ut scelerisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique.",
+                "spans": []
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "quote$a87c1105-c265-404b-8197-8494fb7d2b0c",
+      "value": {
+        "repeat": [{}],
+        "non-repeat": {
+          "quote": [{ "type": "paragraph", "content": { "text": "Lorem ipsum dolor site amet", "spans": [] } }]
+        }
+      }
+    },
+    {
+      "key": "text$9901faa8-0898-48b3-9ddc-e6e602120d76",
+      "value": {
+        "repeat": [{}],
+        "non-repeat": {
+          "columns": "1 Column",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": {
+                "text": "Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis. Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem lacus, accumsan quis, faucibus non, congue vel, arcu. Ut scelerisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique. Nunc iaculis mi in ante. Vivamus imperdiet nibh feugiat est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis. Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem.",
+                "spans": []
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "image_gallery$5900cff3-03e3-40eb-8e01-7217e531dcd2",
+      "value": {
+        "repeat": [
+          {
+            "image": {
+              "origin": {
+                "id": "XoXxhhAAACQAA1ot",
+                "url": "https://prismic-io.s3.amazonaws.com/getting-started-tutorial/d757bd98-6965-43af-8238-0b4ed67fa7dd_forrest-aerial-shot.jpeg",
+                "width": 4979,
+                "height": 3319
+              },
+              "width": 727,
+              "height": 402,
+              "url": "https://images.prismic.io/getting-started-tutorial/d757bd98-6965-43af-8238-0b4ed67fa7dd_forrest-aerial-shot.jpeg?auto=compress,format&rect=0,281,4979,2753&w=727&h=402",
+              "edit": { "background": "#fff", "zoom": 0.14601325567383008, "crop": { "x": 0, "y": -41 } },
+              "credits": null,
+              "alt": "Forrest aerial shot",
+              "provider": "imgix",
+              "thumbnails": {}
+            },
+            "image_description": [
+              {
+                "type": "paragraph",
+                "content": {
+                  "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque,aliquet vel, dapibus id, mattis vel, nisi.",
+                  "spans": []
+                }
+              }
+            ],
+            "link": { "id": "XoX4SBAAACIAA3nJ", "wioUrl": "wio://documents/XoX4SBAAACIAA3nJ" },
+            "link_label": [{ "type": "paragraph", "content": { "text": "Learn more", "spans": [] } }]
+          },
+          {
+            "image": {
+              "origin": {
+                "id": "XoXxtRAAACIAA1sG",
+                "url": "https://prismic-io.s3.amazonaws.com/getting-started-tutorial/02cebb9b-a918-4dfa-9749-7e4c794ec8ca_mountain-range.jpeg",
+                "width": 3872,
+                "height": 2592
+              },
+              "width": 727,
+              "height": 402,
+              "url": "https://images.prismic.io/getting-started-tutorial/02cebb9b-a918-4dfa-9749-7e4c794ec8ca_mountain-range.jpeg?auto=compress,format&rect=0,224,3872,2141&w=727&h=402",
+              "edit": { "background": "#fff", "zoom": 0.1877582644628099, "crop": { "x": 0, "y": -42 } },
+              "credits": null,
+              "alt": "Mountain range",
+              "provider": "imgix",
+              "thumbnails": {}
+            },
+            "image_description": [
+              {
+                "type": "paragraph",
+                "content": {
+                  "text": "Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.",
+                  "spans": []
+                }
+              }
+            ]
+          }
+        ],
+        "non-repeat": {
+          "gallery_title": [{ "type": "heading2", "content": { "text": "Lorem ipsum dolor sit amet", "spans": [] } }]
+        }
+      }
+    }
+  ],
+  "uid_TYPE": "UID",
+  "uid_POSITION": 0,
+  "body_TYPE": "Slices",
+  "body_POSITION": 1,
+  "body.text_TYPE": "Slice",
+  "body.text_POSITION": 2,
+  "body.text.non-repeat.columns_TYPE": "Select",
+  "body.text.non-repeat.columns_POSITION": 3,
+  "body.text.non-repeat.content_TYPE": "StructuredText",
+  "body.text.non-repeat.content_POSITION": 4,
+  "body.quote_TYPE": "Slice",
+  "body.quote_POSITION": 5,
+  "body.quote.non-repeat.quote_TYPE": "StructuredText",
+  "body.quote.non-repeat.quote_POSITION": 6,
+  "body.full_width_image_TYPE": "Slice",
+  "body.full_width_image_POSITION": 7,
+  "body.full_width_image.non-repeat.full_width_image_TYPE": "Image",
+  "body.full_width_image.non-repeat.full_width_image_POSITION": 8,
+  "body.image_gallery_TYPE": "Slice",
+  "body.image_gallery_POSITION": 9,
+  "body.image_gallery.non-repeat.gallery_title_TYPE": "StructuredText",
+  "body.image_gallery.non-repeat.gallery_title_POSITION": 10,
+  "body.image_gallery.repeat.image_TYPE": "Image",
+  "body.image_gallery.repeat.image_POSITION": 11,
+  "body.image_gallery.repeat.image_description_TYPE": "StructuredText",
+  "body.image_gallery.repeat.image_description_POSITION": 12,
+  "body.image_gallery.repeat.link_TYPE": "Link",
+  "body.image_gallery.repeat.link_POSITION": 13,
+  "body.image_gallery.repeat.link_label_TYPE": "StructuredText",
+  "body.image_gallery.repeat.link_label_POSITION": 14,
+  "body.image_highlight_TYPE": "Slice",
+  "body.image_highlight_POSITION": 15,
+  "body.image_highlight.non-repeat.featured_image_TYPE": "Image",
+  "body.image_highlight.non-repeat.featured_image_POSITION": 16,
+  "body.image_highlight.non-repeat.title_TYPE": "StructuredText",
+  "body.image_highlight.non-repeat.title_POSITION": 17,
+  "body.image_highlight.non-repeat.description_TYPE": "StructuredText",
+  "body.image_highlight.non-repeat.description_POSITION": 18,
+  "body.image_highlight.non-repeat.link_TYPE": "Link",
+  "body.image_highlight.non-repeat.link_POSITION": 19,
+  "body.image_highlight.non-repeat.link_label_TYPE": "StructuredText",
+  "body.image_highlight.non-repeat.link_label_POSITION": 20,
+  "slugs_INTERNAL": ["about-us", "about-us---z", "lorem-ipsum-dolor-sit-amet"],
+  "uids_INTERNAL": ["about"]
+}

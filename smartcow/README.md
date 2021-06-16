@@ -30,7 +30,7 @@ prismic theme --ignore-conf
 You can choose any prismic theme here but in this case you should use this repo
 
 ```
-https://github.com/skyward-digital/gatsby-starter-prismic/archive/main.zip
+https://github.com/danspratling/gatsby-starter-prismic/archive/main.zip
 ```
 
 **Note** You'll need to make sure you point to the zip version of the theme - the main URL won't work
