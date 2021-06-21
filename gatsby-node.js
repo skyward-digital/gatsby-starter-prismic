@@ -18,10 +18,10 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  pages.data.allPrismicPage.nodes.forEach(page => {
+  pages.data.allPrismicPage.nodes.forEach((page) => {
     createPage({
       path: page.url,
-      component: path.resolve(__dirname, 'src/templates/page.js'),
+      component: path.resolve(__dirname, 'src/templates/basic-page.js'),
       context: { ...page },
     })
   })
@@ -29,7 +29,10 @@ exports.createPages = async ({ graphql, actions }) => {
   /* Create paginated blog list pages */
   const allBlogPosts = await graphql(`
     {
-      allPrismicBlogPost(sort: { fields: data___publish_date, order: DESC }, limit: 100) {
+      allPrismicBlogPost(
+        sort: { fields: data___publish_date, order: DESC }
+        limit: 100
+      ) {
         nodes {
           id
           uid
@@ -41,7 +44,9 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const numBlogListPages = Math.ceil(allBlogPosts.data.allPrismicBlogPost.nodes.length / postsPerPage)
+  const numBlogListPages = Math.ceil(
+    allBlogPosts.data.allPrismicBlogPost.nodes.length / postsPerPage
+  )
   Array.from({ length: numBlogListPages }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/blog` : `/blog/${i + 1}`,
@@ -58,7 +63,10 @@ exports.createPages = async ({ graphql, actions }) => {
   /* Create blog categories */
   const allBlogCategories = await graphql(`
     {
-      allPrismicBlogPost(sort: { fields: data___publish_date, order: DESC }, limit: 100) {
+      allPrismicBlogPost(
+        sort: { fields: data___publish_date, order: DESC }
+        limit: 100
+      ) {
         group(field: data___blog_category___uid) {
           fieldValue
           nodes {
@@ -75,14 +83,19 @@ exports.createPages = async ({ graphql, actions }) => {
 
   /* Blog Categories */
   /* loop the groups - /blog/category/tips/ */
-  allBlogCategories.data.allPrismicBlogPost.group.forEach(category => {
+  allBlogCategories.data.allPrismicBlogPost.group.forEach((category) => {
     /* Then paginate the blog posts - /blog/category/tips/2/ */
-    const numBlogCategoryPages = Math.ceil(allBlogPosts.data.allPrismicBlogPost.nodes.length / postsPerPage)
+    const numBlogCategoryPages = Math.ceil(
+      allBlogPosts.data.allPrismicBlogPost.nodes.length / postsPerPage
+    )
     Array.from({
       length: numBlogCategoryPages,
     }).forEach((_, i) => {
       createPage({
-        path: i === 0 ? `/blog/category/${category.fieldValue}/` : `/blog/category/${category.fieldValue}/${i + 1}`,
+        path:
+          i === 0
+            ? `/blog/category/${category.fieldValue}/`
+            : `/blog/category/${category.fieldValue}/${i + 1}`,
         component: path.resolve(__dirname, 'src/templates/blog-category.js'),
         context: {
           limit: i === 0 ? postsPerPage - 3 : postsPerPage, //first page has feature which reduces total by 3
@@ -115,7 +128,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  posts.data.allPrismicBlogPost.nodes.forEach(post => {
+  posts.data.allPrismicBlogPost.nodes.forEach((post) => {
     createPage({
       path: `${post.url}/`,
       component: path.resolve(__dirname, 'src/templates/blog-post.js'),
