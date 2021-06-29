@@ -54,6 +54,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "format:check": "prettier --check 'src/**/*.{js,jsx,ts,tsx,css,scss,json,yaml,md}'",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "cy:open": "cypress open",
