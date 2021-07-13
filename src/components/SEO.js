@@ -2,6 +2,25 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 
+
+// seo data for pages and templates
+export const pageSeo = (data) => {
+  if (!data) return null
+  const { data: document, lang, url } = data.prismicContact
+  const prismicLayout = data.prismicLayout
+  
+    const seo = {
+      meta_title: document.meta_title || prismicLayout.data.meta_title,
+      meta_description:
+        document.meta_description || prismicLayout.data.meta_description,
+      meta_image: document.meta_image?.url || prismicLayout.data.meta_image?.url,
+      url: url,
+      article: false,
+      lang: lang,
+    }
+    return seo
+  }
+
 export const SEO = ({ meta_title, meta_description, meta_image, url, article, author, lang }) => {
   const absoluteUrl = `https://mycontentpal.com/${url ? url : ''}`
 
